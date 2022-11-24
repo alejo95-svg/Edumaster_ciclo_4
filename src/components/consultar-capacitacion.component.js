@@ -6,6 +6,24 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button"; 
 
 export default class ConsultarCapacitacion extends Component {
+
+    constructor(props) { 
+        super(props); 
+        this.onChangeCapacitacionIdUsuario = this.onChangeCapacitacionIdUsuario.bind(this); 
+        this.onSubmit = this.onSubmit.bind(this);   
+        
+        this.state = { 
+          idUsuario: "", 
+        }; 
+      } 
+
+      onChangeCapacitacionIdUsuario(e) { 
+        this.setState({ idUsuario: e.target.value }); 
+      }
+      
+      
+
+
   render() {
     return (
         <center>
